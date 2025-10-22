@@ -6,6 +6,7 @@ import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 
 import data from "./data.json";
 import { SectionCards } from "@/components/section-cards";
+import { ChartBarLabelCustom } from "@/components/ui/mandate-summary";
 
 export default function Page() {
   return (
@@ -26,6 +27,7 @@ export default function Page() {
               <SectionCards />
               <SectionCards />
               <SectionCards />
+              <ChartBarLabelCustom />
               <div className="px-4 lg:px-6">
                 <ChartAreaInteractive />
               </div>
