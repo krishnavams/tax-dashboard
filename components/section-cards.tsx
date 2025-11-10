@@ -52,10 +52,32 @@ export function StatCard({title, value, change, trendText, percentageIndicator, 
 export function SectionCards() {
   return (
     <div className="*:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2 @5xl/main:grid-cols-4">
-      <StatCard title="Tax Amount" value="₹1,250.00" change="Trending up this month" trendText="Visitors for the last 6 months" percentageIndicator="12.50" isPositive={true}/>
-      <StatCard title="Tax Volume" value="1,250" change="Down 20% this period" trendText="Acquisition needs attention" percentageIndicator="20" isPositive={false}/>
-      <StatCard title="Commission" value="₹91,250" change="Strong user retention" trendText="Engagement exceed targets" percentageIndicator="12.50" isPositive={true}/>
-      <StatCard title="Growth Rate" value="4.5%" change="Steady performance increase" trendText="Meets growth projections" percentageIndicator="12.50" isPositive={true}/>
+      <StatCard title="Total Tax Amount" value="₹322,594" change="Trending up this month" trendText="Visitors for the last 6 months" percentageIndicator="22.5" isPositive={true}/>
+      <StatCard title="Total Tax Volume" value="3058" change="Down 20% this period" trendText="Acquisition needs attention" percentageIndicator="22.5" isPositive={true}/>
+      <StatCard title="Commission" value="₹1,12,250" change="Strong user retention" trendText="Engagement exceed targets" percentageIndicator="22.5" isPositive={true}/>
+      <StatCard title="Growth Rate" value="22.5%" change="Steady performance increase" trendText="Meets growth projections" percentageIndicator="22.5" isPositive={true}/>
+    </div>
+  )
+}
+
+export function SectionCards1() {
+  return (
+    <div className="*:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2 @5xl/main:grid-cols-4">
+      <StatCard title="FY25 Tax Amount" value="₹222,594" change="Trending up this month" trendText="Visitors for the last 6 months" percentageIndicator="20.5" isPositive={true}/>
+      <StatCard title="FY25 Tax Volume" value="2075" change="Down 20% this period" trendText="Acquisition needs attention" percentageIndicator="20" isPositive={true}/>
+      <StatCard title="Commission" value="₹91,250" change="Strong user retention" trendText="Engagement exceed targets" percentageIndicator="20.50" isPositive={true}/>
+      <StatCard title="Growth Rate" value="20.5%" change="Steady performance increase" trendText="Meets growth projections" percentageIndicator="20.50" isPositive={true}/>
+    </div>
+  )
+}
+
+export function SectionCards2() {
+  return (
+    <div className="*:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2 @5xl/main:grid-cols-4">
+      <StatCard title="FY26 Tax Amount" value="₹0" change="-" trendText="-" percentageIndicator="0" isPositive={true}/>
+      <StatCard title="FY26 Tax Volume" value="0" change="-" trendText="-" percentageIndicator="0" isPositive={true}/>
+      <StatCard title="Commission" value="₹0" change="-" trendText="-" percentageIndicator="0" isPositive={true}/>
+      <StatCard title="Growth Rate" value="0%" change="-" trendText="-" percentageIndicator="0" isPositive={true}/>
     </div>
   )
 }

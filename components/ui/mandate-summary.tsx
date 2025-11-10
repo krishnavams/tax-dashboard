@@ -21,12 +21,12 @@ import {
 export const description = "A bar chart with a custom label"
 
 const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
+  { month: "GST", desktop: 952103, mobile: 80 },
+  { month: "CBDT", desktop: 755984, mobile: 200 },
+  { month: "Telangana", desktop: 675878, mobile: 120 },
+  { month: "Meghalaya", desktop: 597498, mobile: 190 },
+  { month: "Assam", desktop: 519702, mobile: 130 },
+  { month: "ICEGATE", desktop: 200000, mobile: 140 },
 ]
 
 const chartConfig = {
@@ -45,11 +45,11 @@ const chartConfig = {
 
 export function ChartBarLabelCustom() {
   return (
-    <Card>
-      <CardHeader>
+    <Card className="mx-6">
+      {/* <CardHeader>
         <CardTitle>Bar Chart - Custom Label</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
-      </CardHeader>
+      </CardHeader> */}
       <CardContent>
         <ChartContainer config={chartConfig}>
           <BarChart
@@ -77,7 +77,7 @@ export function ChartBarLabelCustom() {
             />
             <Bar
               dataKey="desktop"
-              layout="vertical"
+              // layout="vertical"
               fill="var(--color-desktop)"
               radius={4}
             >
@@ -99,14 +99,14 @@ export function ChartBarLabelCustom() {
           </BarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col items-start gap-2 text-sm">
+      {/* <CardFooter className="flex-col items-start gap-2 text-sm">
         <div className="flex gap-2 leading-none font-medium">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
         <div className="text-muted-foreground leading-none">
           Showing total visitors for the last 6 months
         </div>
-      </CardFooter>
+      </CardFooter> */}
     </Card>
   )
 }
