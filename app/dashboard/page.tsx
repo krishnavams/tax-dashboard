@@ -9,6 +9,8 @@ import { SectionCards, SectionCards1, SectionCards2 } from "@/components/section
 import { ChartBarLabelCustom } from "@/components/ui/mandate-summary";
 import { TableDemo } from "@/components/ui/ui-tables";
 import { ChartLineInteractive } from "@/components/ui/individual-tax-summary";
+import { ChartPieDonutTextTax } from "@/components/ui/pie-chart";
+import { BarChartMultipleTaxYearCompare, ChartBarMultipleTaxYearCompare } from "@/components/ui/bar-chart-multiple";
 
 export default function Page() {
   return (
@@ -31,6 +33,8 @@ export default function Page() {
               <SectionCards2 />
               <TableDemo />
               <ChartLineInteractive />
+              <BarChartMultipleTaxYearCompare />
+              {/* <ChartBarMultipleTaxYearCompare /> */}
               {/* <ChartBarLabelCustom /> */}
               <div className="px-4 lg:px-6">
                 <ChartAreaInteractive />
