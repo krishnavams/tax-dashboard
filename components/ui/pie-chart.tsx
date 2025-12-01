@@ -18,7 +18,8 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
-import { ChartRadarLinesOnlyTax } from "./radar"
+import { ChartRadarVolumeFYWithDropdown } from "./radar"
+
 
 export const description = "Tax distribution - donut chart with text"
 
@@ -137,7 +138,7 @@ export function ChartPieDonutTextTax() {
         </div>
       </CardFooter>
     </Card>
-    <ChartRadarLinesOnlyTax />
+    <ChartRadarVolumeFYWithDropdown />
     </div>
   )
 }
