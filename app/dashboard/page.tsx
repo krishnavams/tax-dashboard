@@ -11,6 +11,10 @@ import { ChartLineInteractive } from "@/components/ui/individual-tax-summary";
 import { ChartBarMultipleTaxYearCompare } from "@/components/ui/bar-chart-multiple";
 // import { ChartPieDonutTextTax } from "@/components/ui/pie-chart";
 import { ChartPieDonutTextTaxWithRadar } from "@/components/pie-chart-all";
+import MandatePaymentModeLineChart from "@/components/ui/mode-wise";
+import MandateStatusAreaChart from "@/components/ui/mandate-all-status";
+// import { MandateModeCollectionChart } from "@/components/ui/mode-wise";
+// import MandateModeCollectionChart from "@/components/ui/mode-wise";
 
 export default function Page() {
   return (
@@ -29,19 +33,21 @@ export default function Page() {
           <div className="@container/main flex flex-1 flex-col gap-2">
             <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
               <SectionCards />
-              <SectionCards1 />
-              <SectionCards2 />
-              <TableDemo />
+              {/* <SectionCards1 />
+              <SectionCards2 /> */}
+              {/* <TableDemo /> */}
               <ChartLineInteractive />
+              <MandatePaymentModeLineChart />
               <ChartPieDonutTextTaxWithRadar />
               <ChartBarMultipleTaxYearCompare />
+              <MandateStatusAreaChart />  
               {/* <BarChartMultipleTaxYearCompare /> */}
               {/* <ChartBarMultipleTaxYearCompare /> */}
               {/* <ChartBarLabelCustom /> */}
-              <div className="px-4 lg:px-6">
+              {/* <div className="px-4 lg:px-6">
                 <ChartAreaInteractive />
-              </div>
-              <DataTable data={data} />
+              </div> */}
+              {/* <DataTable data={data} /> */}
             </div>
           </div>
         </div>
