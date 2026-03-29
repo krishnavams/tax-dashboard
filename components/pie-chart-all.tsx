@@ -216,7 +216,7 @@ const PERIOD_OPTIONS: Record<Granularity, { value: string; label: string }[]> =
   }
 
 // helper to map period → month indexes
-function getMonthIndexesForPeriod(
+export function getMonthIndexesForPeriod(
   granularity: Granularity,
   period: string,
 ): number[] {
