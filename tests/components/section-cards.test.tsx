@@ -81,7 +81,7 @@ describe('SectionCards', () => {
 
   it('renders the correct tax volume value', () => {
     render(<SectionCards />)
-    expect(screen.getByText('3058')).toBeInTheDocument()
+    expect(screen.getByText('3,058')).toBeInTheDocument()
   })
 
   it('renders the correct commission value', () => {
@@ -111,7 +111,7 @@ describe('SectionCards1', () => {
 
   it('renders the FY25 tax volume value', () => {
     render(<SectionCards1 />)
-    expect(screen.getByText('2075')).toBeInTheDocument()
+    expect(screen.getByText('2,075')).toBeInTheDocument()
   })
 
   it('renders Commission and Growth Rate titles', () => {
@@ -135,9 +135,10 @@ describe('SectionCards2', () => {
     expect(zeroValues.length).toBeGreaterThanOrEqual(2)
   })
 
-  it('renders dash placeholder for change and trendText', () => {
+  it('renders em-dash placeholder for change text', () => {
     render(<SectionCards2 />)
-    const dashes = screen.getAllByText('-')
+    // Changed to em-dash (—) for better typography
+    const dashes = screen.getAllByText('—')
     expect(dashes.length).toBeGreaterThan(0)
   })
 })

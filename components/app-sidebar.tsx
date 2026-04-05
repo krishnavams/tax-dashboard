@@ -2,21 +2,20 @@
 
 import * as React from "react";
 import {
-  IconCamera,
+  IconArrowsUpDown,
   IconChartBar,
+  IconChartPie,
+  IconCreditCard,
   IconDashboard,
   IconDatabase,
-  IconFileAi,
   IconFileDescription,
-  IconFileWord,
-  IconFolder,
   IconHelp,
-  IconInnerShadowTop,
-  IconListDetails,
+  IconListCheck,
   IconReport,
-  IconSearch,
   IconSettings,
-  IconUsers,
+  IconBuildingBank,
+  IconReceipt,
+  IconTrendingUp,
 } from "@tabler/icons-react";
 
 import { NavDocuments } from "@/components/nav-documents";
@@ -35,83 +34,40 @@ import {
 
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
+    name: "Admin User",
+    email: "admin@idfcfirstbank.com",
     avatar: "/avatars/shadcn.jpg",
   },
   navMain: [
     {
-      title: "Dashboard",
-      url: "#",
+      title: "Overview",
+      url: "/dashboard",
       icon: IconDashboard,
     },
     {
-      title: "Lifecycle",
+      title: "Tax Collections",
       url: "#",
-      icon: IconListDetails,
+      icon: IconReceipt,
     },
     {
-      title: "Analytics",
+      title: "Payment Modes",
       url: "#",
-      icon: IconChartBar,
+      icon: IconCreditCard,
     },
     {
-      title: "Projects",
+      title: "Transaction Status",
       url: "#",
-      icon: IconFolder,
+      icon: IconListCheck,
     },
     {
-      title: "Team",
+      title: "Year Comparison",
       url: "#",
-      icon: IconUsers,
-    },
-  ],
-  navClouds: [
-    {
-      title: "Capture",
-      icon: IconCamera,
-      isActive: true,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
+      icon: IconArrowsUpDown,
     },
     {
-      title: "Proposal",
-      icon: IconFileDescription,
+      title: "Reports",
       url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Prompts",
-      icon: IconFileAi,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
+      icon: IconReport,
     },
   ],
   navSecondary: [
@@ -121,31 +77,26 @@ const data = {
       icon: IconSettings,
     },
     {
-      title: "Get Help",
+      title: "Help & Support",
       url: "#",
       icon: IconHelp,
-    },
-    {
-      title: "Search",
-      url: "#",
-      icon: IconSearch,
     },
   ],
   documents: [
     {
-      name: "Data Library",
+      name: "GST Data",
       url: "#",
       icon: IconDatabase,
     },
     {
-      name: "Reports",
+      name: "CBDT Data",
       url: "#",
-      icon: IconReport,
+      icon: IconDatabase,
     },
     {
-      name: "Word Assistant",
+      name: "State Mandates",
       url: "#",
-      icon: IconFileWord,
+      icon: IconFileDescription,
     },
   ],
 };
@@ -160,11 +111,16 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               asChild
               className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
-              <a href="#">
-                <IconInnerShadowTop className="!size-5" />
-                <span className="text-base font-semibold">
-                  GBS Ultra Dashboard
-                </span>
+              <a href="/dashboard">
+                <IconBuildingBank className="!size-5 text-primary" />
+                <div className="leading-none">
+                  <span className="text-sm font-semibold block">
+                    IDFC FIRST Bank
+                  </span>
+                  <span className="text-[10px] text-sidebar-foreground/60 block mt-0.5">
+                    Tax Analytics
+                  </span>
+                </div>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
