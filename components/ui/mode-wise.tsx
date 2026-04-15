@@ -2,8 +2,8 @@
 
 import * as React from "react";
 import {
-  LineChart,
-  Line,
+  BarChart,
+  Bar,
   CartesianGrid,
   XAxis,
 } from "recharts";
@@ -144,15 +144,15 @@ export default function MandatePaymentModeLineChart() {
           config={chartConfig}
           className="h-[260px] w-full"
         >
-          <LineChart data={chartData} margin={{ left: 20, right: 12 }}>
+          <BarChart data={chartData} margin={{ left: 20, right: 12 }}>
             <CartesianGrid vertical={false} />
             <XAxis
               dataKey="month"
-              interval={0}          // forces all labels (Jan included)
+              interval={0}
               tickLine={false}
               axisLine={false}
               tickMargin={1}
-                          />
+            />
 
             <ChartTooltip
               cursor={false}
@@ -160,16 +160,14 @@ export default function MandatePaymentModeLineChart() {
             />
 
             {subModes.map((mode, index) => (
-              <Line
+              <Bar
                 key={mode.label}
                 dataKey={mode.label}
-                type="monotone"
-                stroke={`hsl(${index * 60}, 70%, 50%)`}
-                strokeWidth={2}
-                dot={false}
+                fill={`hsl(${index * 60}, 70%, 50%)`}
+                radius={[4, 4, 0, 0]}
               />
             ))}
-          </LineChart>
+          </BarChart>
         </ChartContainer>
       </CardContent>
     </Card>

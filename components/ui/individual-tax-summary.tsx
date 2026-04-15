@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { CartesianGrid, Line, LineChart, XAxis } from "recharts"
+import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 
 import {
   Card,
@@ -470,7 +470,7 @@ export function ChartLineInteractive() {
             config={chartConfig}
             className="aspect-auto h-[250px] w-full"
           >
-            <LineChart
+            <BarChart
               accessibilityLayer
               data={chartData}
               margin={{
@@ -508,14 +508,12 @@ export function ChartLineInteractive() {
                   />
                 }
               />
-              <Line
+              <Bar
                 dataKey={activeChart}
-                type="monotone"
-                stroke={`var(--color-${activeChart})`}
-                strokeWidth={2}
-                dot={false}
+                fill={`var(--color-${activeChart})`}
+                radius={[4, 4, 0, 0]}
               />
-            </LineChart>
+            </BarChart>
           </ChartContainer>
         </CardContent>
       </Card>
